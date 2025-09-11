@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Kian Axl</title>
+  <meta name="description" content="Kiyan Musk — Student. Minimalist, accessible, SEO-friendly portfolio." />
+
+  <style>
+    :root {
+      --bg: #F9F5E3; /* soft cream */
+      --surface: #ffffff;
+      --text: #22223B; /* dark navy */
+      --muted: #4A4E69; /* muted indigo */
+      --accent: #F0A500; /* amber */
+    }
+    :root.dark {
+      --bg:#22223B;
+      --surface:#2e304d;
+      --text:#f5f5f5;
+      --muted:#c5c6d0;
+    }
+
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.7;
+    }
+
+    .page { max-width:1100px; margin:auto; padding:2rem; }
+
+    header {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:1rem 0; position:sticky; top:0;
+      background:var(--bg); z-index:100;
+    }
+
+    .brand h1 { margin:0; font-size:1.6rem; }
+    .brand p { margin:0; color:var(--muted); font-size:1rem; }
+
+    nav { display:flex; gap:1rem; }
+    nav a, nav button {
+      background:transparent; border:none; padding:.5rem .8rem;
+      border-radius:6px; color:var(--text);
+      text-decoration:none; font-weight:bold; cursor:pointer;
+      transition:background .2s;
+    }
+    nav a:hover { background:var(--accent); color:#000; }
+
+    .hero { margin:3rem 0; text-align:center; }
+    .hero h2 { font-size:2.2rem; margin:.5rem 0; }
+    .hero p { color:var(--muted); font-size:1.1rem; }
+
+    section { margin:3rem 0; }
+    section h2 {
+      margin-bottom:1rem; font-size:1.8rem;
+      border-bottom:3px solid var(--accent);
+      display:inline-block; padding-bottom:.3rem;
+    }
+
+    /* Accordion style */
+    .accordion {
+      margin-top:1rem;
+    }
+    .accordion-btn {
+      background: var(--accent);
+      color:#000;
+      font-weight:bold;
+      border:none;
+      padding:0.8rem 1.2rem;
+      border-radius:8px;
+      cursor:pointer;
+      width:100%;
+      text-align:left;
+      transition:background 0.3s;
+    }
+    .accordion-btn:hover {
+      background:#e69500;
+    }
+    .accordion-content {
+      max-height:0;
+      overflow:hidden;
+      transition:max-height 0.4s ease, padding 0.3s ease;
+      background:var(--surface);
+      border-radius:8px;
+      margin-top:0.5rem;
+      box-shadow:0 2px 6px rgba(0,0,0,.1);
+      padding:0 1rem;
+    }
+    .accordion-content.active {
+      max-height:1000px;
+      padding:1rem;
+    }
+    .card {
+      background:var(--surface);
+      padding:1rem;
+      border-radius:8px;
+      box-shadow:0 2px 6px rgba(0,0,0,.1);
+      margin-bottom:1rem;
+    }
+    .card h3 { margin:.2rem 0; }
+    .card p { margin:.2rem 0; color:var(--muted); }
+
+    .skills-list, .experience, .certs, .projects {
+      display:grid;
+      gap:1rem;
+    }
+    .skills-list { grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); }
+    .skills-list .card { text-align:center; font-weight:bold; }
+
+    .socials {
+      display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1rem;
+    }
+    .socials a {
+      background:var(--accent); color:#000;
+      text-decoration:none; padding:.5rem 1rem;
+      border-radius:6px; font-weight:bold;
+      transition:background .2s;
+    }
+    .socials a:hover { background:#e69500; }
+
+    footer {
+      margin-top:3rem; font-size:.85rem; color:var(--muted);
+      text-align:center; padding:1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <h1>Kian Axl</h1>
+        <p></p>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#certs">Certifications</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle">🌙</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Hello, I’m Kian 👋</h2>
+        <p>I build clean, minimalist, and accessible websites and applications.</p>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="accordion">
+          <button class="accordion-btn">View My Projects</button>
+          <div class="accordion-content">
+            <div class="card">
+              <h3>HEALPI Web</h3>
+              <p>A healthcare management platform bridging provincial and municipal services.</p>
+            </div>
+            <div class="card">
+              <h3>NetHench</h3>
+              <p>An IoT dashboard for monitoring poultry health and anthelmintic efficacy.</p>
+            </div>
+            <div class="card">
+              <h3>Stealthify Web</h3>
+              <p>A privacy-focused interface for dynamic IP switching and secure browsing.</p>
+            </div>
+            <div class="card">
+              <h3>Hotel’e</h3>
+              <p>A hotel management system fully integrated with a database.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section id="certs">
+        <h2>Certifications</h2>
+        <div class="accordion">
+          <button class="accordion-btn">View My Certifications</button>
+          <div class="accordion-content">
+            <div class="card"><h3>Cyber Threat Management</h3></div>
+            <div class="card"><h3>SQL Injection Attacks</h3></div>
+            <div class="card"><h3>Introduction to Cybersecurity</h3></div>
+            <div class="card"><h3>Data Privacy Awareness (4-hour Session)</h3></div>
+            <div class="card"><h3>Cyber Tools – ICpEP</h3></div>
+            <div class="card"><h3>Cyber Threat Landscape and Cyber Hygiene</h3></div>
+            <div class="card"><h3>Cyber 101</h3></div>
+            <div class="card"><h3>Computer Hardware Basics</h3></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="accordion">
+          <button class="accordion-btn">View My Skills</button>
+          <div class="accordion-content">
+            <div class="skills-list">
+              <div class="card">HTML / CSS</div>
+              <div class="card">JavaScript</div>
+              <div class="card">Flutter</div>
+              <div class="card">SQL</div>
+              <div class="card">Networking</div>
+              <div class="card">Computer Technician</div>
+              <div class="card">Android Repair</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience">
+        <h2>Work Experience</h2>
+        <div class="accordion">
+          <button class="accordion-btn">View My Experience</button>
+          <div class="accordion-content">
+            <div class="experience">
+              <div class="card">
+                <h3>Coming Soon</h3>
+                <p></p>
+              </div>
+              <div class="card">
+                <h3>Coming Soon</h3>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>Let’s connect on the platforms below:</p>
+        <div class="socials">
+          <a href="https://facebook.com/" target="_blank">Facebook</a>
+          <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/Kasumi12" target="_blank">GitHub</a>
+          <a href="https://discord.com/" target="_blank">Discord</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2025 Kasumi12
+    </footer>
+  </div>
+
+  <script>
+    const btn = document.getElementById("themeToggle");
+    btn.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+    });
+
+    // Accordion toggles
+    document.querySelectorAll(".accordion-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        const content = button.nextElementSibling;
+        content.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>
