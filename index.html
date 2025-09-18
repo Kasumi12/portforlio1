@@ -84,11 +84,6 @@
     .hero .btn:hover {
       background: #374ccf;
     }
-
-    /* Fix header cutting content */
-    section {
-      scroll-margin-top: 90px; /* offset for fixed header */
-    }
   </style>
 </head>
 <body>
@@ -227,16 +222,6 @@
       © 2025 Kasumi12
     </footer>
   </div>
-
-  <!-- Accordion script -->
-  <script>
-    document.querySelectorAll(".accordion-btn").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const content = btn.nextElementSibling;
-        btn.classList.toggle("active");
-        content.classList.toggle("active");
-      });
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
