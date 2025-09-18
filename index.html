@@ -271,6 +271,82 @@
       transform: scale(1.06);
     }
 
+    /* Contact form styles */
+    .contact-form {
+      margin: 2rem auto 0 auto;
+      max-width: 420px;
+      background: var(--surface);
+      padding: 2rem 1.5rem 1.2rem 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      animation: fadeInUp 1s 0.2s both;
+    }
+    .contact-form label {
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      color: var(--text);
+      font-size: 1.07rem;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.7rem 1rem;
+      border-radius: 7px;
+      border: 1.5px solid #ddd7;
+      font-size: 1rem;
+      font-family: inherit;
+      color: var(--text);
+      background: #fff9;
+      transition: border 0.2s;
+      resize: none;
+      box-sizing: border-box;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+      outline: none;
+      border: 1.5px solid var(--accent);
+      background: #fff;
+    }
+    .contact-form textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+    .contact-form button {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      background: linear-gradient(90deg, var(--accent), var(--accent2) 90%);
+      color: #23234b;
+      font-weight: 700;
+      border: none;
+      border-radius: 7px;
+      font-size: 1.08rem;
+      cursor: pointer;
+      transition: background var(--transition), box-shadow 0.21s, transform 0.15s;
+      box-shadow: var(--shadow);
+      margin-top: 0.3rem;
+    }
+    .contact-form button:hover {
+      background: linear-gradient(90deg, #f7c045, #f0a500 95%);
+      color: #23234b;
+      box-shadow: 0 2px 16px 0 #f0a50023;
+      transform: scale(1.02);
+    }
+    .contact-form .form-success {
+      color: #1ab71a;
+      font-weight: 700;
+      margin-top: 0.8rem;
+      text-align: center;
+      font-size: 1.08rem;
+    }
+    .contact-form .form-error {
+      color: #e03c3c;
+      font-weight: 700;
+      margin-top: 0.8rem;
+      text-align: center;
+      font-size: 1.08rem;
+    }
+
     footer {
       margin-top: 3rem;
       font-size: .98rem;
@@ -285,11 +361,12 @@
       .page { padding: 2rem 0.5rem 0.6rem 0.5rem; }
       header { flex-direction: column; align-items: flex-start; gap: 0.7rem;}
       .brand h1 { font-size: 1.36rem;}
-      nav { flex-direction: column; gap: 0.1rem; background: var(--surface); box-shadow: var(--shadow); position: absolute; top: 60px; right: 0; min-width: 170px; border-radius: 0 0 14px 14px; padding: 1rem 1.3rem; display: none;}
+      nav { flex-direction: column; gap: 0.1rem; background: var(--surface); box-shadow: var(--shadow); position: absolute; top: 60px; right: 0; min-width: 170px; border-radius: 0 0 14px 14px; padding[...]
       nav.open { display: flex;}
       .nav-toggle { display:flex;}
       .hero h2 { font-size: 1.45rem;}
       .skills-list { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+      .contact-form { padding: 1.2rem 0.5rem; }
     }
     @media (max-width: 500px) {
       section h2 { font-size: 1.18rem; }
@@ -297,6 +374,7 @@
       .hero h2 { font-size: 1.1rem;}
       .card { padding: 0.85rem 0.6rem;}
       .socials a { font-size: 0.92rem;}
+      .contact-form { padding: 0.8rem 0.2rem; }
     }
   </style>
 </head>
@@ -419,6 +497,16 @@
           <a href="https://github.com/Kasumi12" target="_blank" rel="noopener">GitHub</a>
           <a href="https://discord.com/" target="_blank" rel="noopener">Discord</a>
         </div>
+        <!-- Contact Form: Email Me -->
+        <form class="contact-form" id="emailForm" autocomplete="off">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="off" />
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Type your message..." required></textarea>
+          <button type="submit">Send</button>
+          <div class="form-success" id="formSuccess" style="display:none;"></div>
+          <div class="form-error" id="formError" style="display:none;"></div>
+        </form>
       </section>
     </main>
 
@@ -477,6 +565,31 @@
       }, { threshold: 0.18 }
     );
     sections.forEach(sec => observer.observe(sec));
+
+    // Contact Form Submit Handler (mailto fallback)
+    const form = document.getElementById("emailForm");
+    const formSuccess = document.getElementById("formSuccess");
+    const formError = document.getElementById("formError");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      formSuccess.style.display = "none";
+      formError.style.display = "none";
+
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      if (!email || !message) {
+        formError.textContent = "Please fill out both fields.";
+        formError.style.display = "block";
+        return;
+      }
+      // You can update this to your preferred email address
+      const targetEmail = "kianaxl49@gmail.com";
+      const mailto = `mailto:${targetEmail}?subject=Portfolio Contact from ${encodeURIComponent(email)}&body=${encodeURIComponent(message)}`;
+      window.location.href = mailto;
+      formSuccess.textContent = "Email window opened! You can send your message.";
+      formSuccess.style.display = "block";
+      form.reset();
+    });
   </script>
 </body>
 </html>
