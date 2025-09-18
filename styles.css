@@ -1,3 +1,8 @@
+body, body * {
+  color: #000 !important;
+  font-weight: bold !important;
+}
+
 :root {
   --bg: linear-gradient(135deg, #f9f5e3 0%, #f3e7d9 100%);
   --surface: #ffffffcc;
