@@ -377,3 +377,51 @@ footer {
   .socials a { font-size: 0.92rem;}
   .contact-form { padding: 0.8rem 0.2rem; }
 }
+
+/* Hero Section Custom Styling */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 85vh;
+  padding: 2rem;
+  background: transparent;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.hero h1 .highlight {
+  color: var(--accent);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent), var(--accent2) 90%);
+  padding: 0.85rem 1.6rem;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #23234b;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.3s;
+  box-shadow: var(--shadow);
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 26px 0 #f0a50044;
+  background: linear-gradient(90deg, #f7c045, #f0a500 95%);
+}
