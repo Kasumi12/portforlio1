@@ -1,158 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Kian Axl</title>
-  <meta name="description" content="Kiyan Musk — Student. Minimalist, accessible, SEO-friendly portfolio." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasumi's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="brand">
-        <h1>Kian Axl</h1>
-        <p></p>
+  <header>
+    <nav>
+      <div class="logo">Kasumi</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <h1>Hello, I'm Kasumi</h1>
+      <p>Web Developer | Designer | Creator</p>
+      <a href="#projects" class="cta-btn">See My Work</a>
+    </section>
+  </header>
+  <main>
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>I'm a passionate web developer with experience in building responsive and interactive websites using HTML, CSS, and JavaScript. I love creating beautiful and functional digital experiences.</p>
+    </section>
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <div class="project-card">
+          <h3>Project One</h3>
+          <p>A brief description of your first project goes here.</p>
+        </div>
+        <div class="project-card">
+          <h3>Project Two</h3>
+          <p>A brief description of your second project goes here.</p>
+        </div>
+        <!-- Add more project cards as needed -->
       </div>
-      <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation" tabindex="0">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav id="mainNav">
-        <a href="#projects">Projects</a>
-        <a href="#certs">Certifications</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero">
-        <h2>Hello, I’m Kian 👋</h2>
-        <p>I build clean, minimalist, and accessible for website and mobile.</p>
-      </section>
-
-      <!-- Projects -->
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="accordion">
-          <button class="accordion-btn">View My Projects</button>
-          <div class="accordion-content">
-            <div class="card">
-              <img src="/images/healpi-web.jpg" alt="HEALPI Web Screenshot" style="width:100%;max-width:300px;border-radius:8px;margin-bottom:10px;" />
-              <h3>HEALPI Web</h3>
-              <p>A healthcare management platform bridging provincial and municipal services.</p>
-            </div>
-            <div class="card">
-              <img src="/images/nethench.jpg" alt="NetHench Screenshot" style="width:100%;max-width:300px;border-radius:8px;margin-bottom:10px;" />
-              <h3>NetHench</h3>
-              <p>An IoT dashboard for monitoring poultry health and anthelmintic efficacy.</p>
-            </div>
-            <div class="card">
-              <img src="/images/stealthify-web.jpg" alt="Stealthify Web Screenshot" style="width:100%;max-width:300px;border-radius:8px;margin-bottom:10px;" />
-              <h3>Stealthify Web</h3>
-              <p>A privacy-focused interface for dynamic IP switching and secure browsing.</p>
-            </div>
-            <div class="card">
-              <img src="/images/hotele.jpg" alt="Hotel’e Screenshot" style="width:100%;max-width:300px;border-radius:8px;margin-bottom:10px;" />
-              <h3>Hotel’e</h3>
-              <p>A hotel management system fully integrated with a database.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Certifications -->
-      <section id="certs">
-        <h2>Certifications</h2>
-        <div class="accordion">
-          <button class="accordion-btn">View My Certifications</button>
-          <div class="accordion-content">
-            <div class="card"><h3>Cyber Threat Management</h3></div>
-            <div class="card"><h3>SQL Injection Attacks</h3></div>
-            <div class="card"><h3>Introduction to Cybersecurity</h3></div>
-            <div class="card"><h3>Data Privacy Awareness (4-hour Session)</h3></div>
-            <div class="card"><h3>Cyber Tools – ICpEP</h3></div>
-            <div class="card"><h3>Cyber Threat Landscape and Cyber Hygiene</h3></div>
-            <div class="card"><h3>Cyber 101</h3></div>
-            <div class="card">
-              <a href="/Computer%20Hardware%20Basics.pdf" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.icons8.com/plasticine/100/000000/pdf.png" alt="Certificate PDF" style="width: 80px;" />
-                <div>View Computer Hardware Basics Certificate (PDF)</div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills -->
-      <section id="skills">
-        <h2>Skills</h2>
-        <div class="accordion">
-          <button class="accordion-btn">View My Skills</button>
-          <div class="accordion-content">
-            <div class="skills-list">
-              <div class="card">HTML / CSS</div>
-              <div class="card">JavaScript</div>
-              <div class="card">Flutter</div>
-              <div class="card">SQL</div>
-              <div class="card">Networking</div>
-              <div class="card">Computer Technician</div>
-              <div class="card">Android Repair</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Experience -->
-      <section id="experience">
-        <h2>Work Experience</h2>
-        <div class="accordion">
-          <button class="accordion-btn">View My Experience</button>
-          <div class="accordion-content">
-            <div class="experience">
-              <div class="card">
-                <h3>Coming Soon</h3>
-              </div>
-              <div class="card">
-                <h3>Coming Soon</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section class="contact" id="contact">
-        <h2>Contact Me</h2>
-        <p>Let’s connect on the platforms below:</p>
-        <div class="socials">
-          <a href="https://www.facebook.com/surudoi.16" target="_blank" rel="noopener">Facebook</a>
-          <a href="https://www.linkedin.com/in/kian-axl-diaz-814605365" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/Kasumi12" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://discord.com/" target="_blank" rel="noopener">Discord</a>
-        </div>
-        <!-- Contact Form: Email Me -->
-        <form class="contact-form" id="emailForm" autocomplete="off">
-          <label for="email">Your Email</label>
-          <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="off" />
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" placeholder="Type your message..." required></textarea>
-          <button type="submit">Send</button>
-          <div class="form-success" id="formSuccess" style="display:none;"></div>
-          <div class="form-error" id="formError" style="display:none;"></div>
-        </form>
-      </section>
-    </main>
-
-    <footer>
-      © 2025 Kasumi12
-    </footer>
-  </div>
+    </section>
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div id="form-message"></div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Kasumi. All rights reserved.</p>
+  </footer>
   <script src="main.js"></script>
 </body>
 </html>
