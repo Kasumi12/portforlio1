@@ -10,9 +10,8 @@
   <!-- Font Awesome for Social Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
-    /* New landing page style */
     :root {
-      --accent: #4a6cf7; /* Change this to match your palette */
+      --accent: #4a6cf7;
     }
 
     header {
@@ -83,6 +82,45 @@
 
     .hero .btn:hover {
       background: #374ccf;
+    }
+
+    /* Accordion styles */
+    .accordion-btn {
+      background: var(--accent);
+      color: #fff;
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-bottom: 1rem;
+    }
+    .accordion-btn:hover {
+      background: #374ccf;
+    }
+
+    .accordion-content {
+      display: none;
+      margin-bottom: 2rem;
+    }
+
+    .accordion-content.active {
+      display: block;
+    }
+
+    .card {
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
     }
   </style>
 </head>
@@ -222,6 +260,22 @@
       © 2025 Kasumi12
     </footer>
   </div>
-  <script src="main.js"></script>
+
+  <!-- Accordion Script -->
+  <script>
+    document.querySelectorAll(".accordion-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        const content = button.nextElementSibling;
+
+        // close other open accordions
+        document.querySelectorAll(".accordion-content").forEach(c => {
+          if (c !== content) c.classList.remove("active");
+        });
+
+        // toggle current
+        content.classList.toggle("active");
+      });
+    });
+  </script>
 </body>
 </html>
