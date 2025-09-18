@@ -2,7 +2,13 @@ body, body * {
   color: #000 !important;
   font-weight: bold !important;
 }
-
+h1, h2, h3, h4, h5, h6, .brand h1, section h2 {
+  color: #000 !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #000 !important;
+  text-shadow: none !important;
+}
 :root {
   --bg: linear-gradient(135deg, #f9f5e3 0%, #f3e7d9 100%);
   --surface: #ffffffcc;
