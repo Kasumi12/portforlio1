@@ -7,13 +7,14 @@
   <meta name="description" content="Kiyan Musk — Student. Minimalist, accessible, SEO-friendly portfolio." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
   <div class="page">
     <header>
       <div class="brand">
         <h1>Kian Axl</h1>
-        <p></p>
       </div>
       <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation" tabindex="0">
         <span></span>
@@ -31,9 +32,14 @@
     </header>
 
     <main>
+      <!-- Hero / Landing -->
       <section class="hero">
-        <h2>Hello, I’m Kian 👋</h2>
-        <p>I build clean, minimalist, and accessible for website and mobile.</p>
+        <div class="hero-content">
+          <img src="/images/me.jpg" alt="Kian Axl Photo" class="hero-img" />
+          <h2>Hello, I’m <span class="highlight">Kian 👋</span></h2>
+          <p>I build clean, minimalist, and accessible websites & mobile applications.</p>
+          <a href="#projects" class="btn">View My Work</a>
+        </div>
       </section>
 
       <!-- Projects -->
@@ -43,22 +49,22 @@
           <button class="accordion-btn">View My Projects</button>
           <div class="accordion-content">
             <div class="card">
-              <img src="/images/healpi-web.jpg" alt="HEALPI Web Screenshot" style="width:100%;max-width:300px;border-radius:8px;margin-bottom:10px;" />
+              <img src="/images/healpi-web.jpg" alt="HEALPI Web Screenshot"/>
               <h3>HEALPI Web</h3>
               <p>A healthcare management platform bridging provincial and municipal services.</p>
             </div>
             <div class="card">
-              <img src="/images/nethench.jpg" alt="NetHench Screenshot" style="width:100%;max-width:300px;border-radius:8px;margin-bottom:10px;" />
+              <img src="/images/nethench.jpg" alt="NetHench Screenshot"/>
               <h3>NetHench</h3>
               <p>An IoT dashboard for monitoring poultry health and anthelmintic efficacy.</p>
             </div>
             <div class="card">
-              <img src="/images/stealthify-web.jpg" alt="Stealthify Web Screenshot" style="width:100%;max-width:300px;border-radius:8px;margin-bottom:10px;" />
+              <img src="/images/stealthify-web.jpg" alt="Stealthify Web Screenshot"/>
               <h3>Stealthify Web</h3>
               <p>A privacy-focused interface for dynamic IP switching and secure browsing.</p>
             </div>
             <div class="card">
-              <img src="/images/hotele.jpg" alt="Hotel’e Screenshot" style="width:100%;max-width:300px;border-radius:8px;margin-bottom:10px;" />
+              <img src="/images/hotele.jpg" alt="Hotel’e Screenshot"/>
               <h3>Hotel’e</h3>
               <p>A hotel management system fully integrated with a database.</p>
             </div>
@@ -72,9 +78,9 @@
         <div class="accordion">
           <button class="accordion-btn">View My Certifications</button>
           <div class="accordion-content">
-            <div class="card"><h3>Cyber Threat Management</h3></div>
-            <div class="card"><h3>SQL Injection Attacks</h3></div>
-            <div class="card"><h3>Introduction to Cybersecurity</h3></div>
+            <div class="card"><img src="/images/cert-cyber.jpg" alt="Cyber Threat Management"/><h3>Cyber Threat Management</h3></div>
+            <div class="card"><img src="/images/cert-sql.jpg" alt="SQL Injection Attacks"/><h3>SQL Injection Attacks</h3></div>
+            <div class="card"><img src="/images/cert-intro.jpg" alt="Introduction to Cybersecurity"/><h3>Introduction to Cybersecurity</h3></div>
             <div class="card"><h3>Data Privacy Awareness (4-hour Session)</h3></div>
             <div class="card"><h3>Cyber Tools – ICpEP</h3></div>
             <div class="card"><h3>Cyber Threat Landscape and Cyber Hygiene</h3></div>
@@ -115,12 +121,8 @@
           <button class="accordion-btn">View My Experience</button>
           <div class="accordion-content">
             <div class="experience">
-              <div class="card">
-                <h3>Coming Soon</h3>
-              </div>
-              <div class="card">
-                <h3>Coming Soon</h3>
-              </div>
+              <div class="card"><h3>Coming Soon</h3></div>
+              <div class="card"><h3>Coming Soon</h3></div>
             </div>
           </div>
         </div>
@@ -131,15 +133,15 @@
         <h2>Contact Me</h2>
         <p>Let’s connect on the platforms below:</p>
         <div class="socials">
-          <a href="https://www.facebook.com/surudoi.16" target="_blank" rel="noopener">Facebook</a>
-          <a href="https://www.linkedin.com/in/kian-axl-diaz-814605365" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/Kasumi12" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://discord.com/" target="_blank" rel="noopener">Discord</a>
+          <a href="https://www.facebook.com/surudoi.16" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/in/kian-axl-diaz-814605365" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Kasumi12" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://discord.com/" target="_blank"><i class="fab fa-discord"></i></a>
         </div>
-        <!-- Contact Form: Email Me -->
+        <!-- Contact Form -->
         <form class="contact-form" id="emailForm" autocomplete="off">
           <label for="email">Your Email</label>
-          <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="off" />
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
           <label for="message">Your Message</label>
           <textarea id="message" name="message" placeholder="Type your message..." required></textarea>
           <button type="submit">Send</button>
