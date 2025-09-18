@@ -5,7 +5,6 @@ This site showcases my **projects, certifications, skills, and experiences** in 
 
 ### 🔥 Features
 - Minimalist and mobile-friendly layout  
-- Dark/Light theme toggle  
 - Expandable sections for projects, skills, and certifications  
 - Built with HTML, CSS, and JavaScript
 
