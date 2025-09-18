@@ -1,3 +1,4 @@
+/* Global reset overrides */
 body, body * {
   color: #000 !important;
   font-weight: bold !important;
@@ -9,6 +10,8 @@ h1, h2, h3, h4, h5, h6, .brand h1, section h2 {
   -webkit-text-fill-color: #000 !important;
   text-shadow: none !important;
 }
+
+/* Theme variables */
 :root {
   --bg: linear-gradient(135deg, #f9f5e3 0%, #f3e7d9 100%);
   --surface: #ffffffcc;
@@ -169,7 +172,7 @@ section h2 {
   -webkit-text-fill-color: transparent;
 }
 
-/* Accordion styles & animation */
+/* Accordion styles */
 .accordion {
   margin-top: 1rem;
   width: 100%;
@@ -272,7 +275,7 @@ section h2 {
   transform: scale(1.06);
 }
 
-/* Contact form styles */
+/* Contact form */
 .contact-form {
   margin: 2rem auto 0 auto;
   max-width: 420px;
@@ -357,7 +360,7 @@ footer {
   opacity: 0.92;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 780px) {
   .page { padding: 2rem 0.5rem 0.6rem 0.5rem; }
   header { flex-direction: column; align-items: flex-start; gap: 0.7rem;}
