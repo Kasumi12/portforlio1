@@ -114,3 +114,15 @@
   </section>
 </body>
 </html>
+
+<script>
+  // Accordion toggle
+  document.querySelectorAll(".accordion-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      btn.classList.toggle("active");
+      content.classList.toggle("active");
+    });
+  });
+</script>
+
