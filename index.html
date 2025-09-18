@@ -1,18 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Kian Axl</title>
-  <meta name="description" content="Kiyan Musk — Student. Minimalist, accessible, SEO-friendly portfolio." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Font Awesome for Social Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kian Axl Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* New landing page style */
     :root {
-      --accent: #4a6cf7; /* Change this to match your palette */
+      --bg: #fdfdfd;
+      --text: #1a1a1a;
+      --accent: #4a6cf7; /* replace with your accent color */
+      --btn-text: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
 
     header {
@@ -23,27 +34,26 @@
       position: fixed;
       width: 100%;
       top: 0;
-      background: var(--bg, #fff);
+      background: var(--bg);
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
       z-index: 1000;
     }
 
-    header .brand h1 {
+    header .logo {
       font-size: 1.5rem;
       font-weight: 700;
       color: var(--accent);
-      margin: 0;
     }
 
-    header nav a {
+    nav a {
       margin-left: 2rem;
       text-decoration: none;
-      color: var(--text, #111);
+      color: var(--text);
       font-weight: 500;
       transition: color 0.3s;
     }
 
-    header nav a:hover {
+    nav a:hover {
       color: var(--accent);
     }
 
@@ -57,12 +67,12 @@
       padding: 0 1rem;
     }
 
-    .hero h2 {
+    .hero h1 {
       font-size: 3rem;
       font-weight: 700;
     }
 
-    .hero h2 .highlight {
+    .hero h1 span {
       color: var(--accent);
     }
 
@@ -73,7 +83,7 @@
 
     .hero .btn {
       background: var(--accent);
-      color: #fff;
+      color: var(--btn-text);
       padding: 0.8rem 1.6rem;
       border-radius: 6px;
       text-decoration: none;
@@ -82,146 +92,25 @@
     }
 
     .hero .btn:hover {
-      background: #374ccf;
+      background: #374ccf; /* darker shade */
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="brand">
-        <h1>Kian Axl</h1>
-      </div>
-      <nav id="mainNav">
-        <a href="#projects">Projects</a>
-        <a href="#certs">Certifications</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+  <header>
+    <div class="logo">Kian Axl</div>
+    <nav>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <main>
-      <!-- Hero / Landing -->
-      <section class="hero" id="home">
-        <h2>Hello, I'm <span class="highlight">Kian Axl</span></h2>
-        <p>A passionate developer creating amazing digital experiences.</p>
-        <a href="#projects" class="btn">Explore My Work →</a>
-      </section>
-
-      <!-- Projects -->
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="accordion">
-          <button class="accordion-btn">View My Projects</button>
-          <div class="accordion-content">
-            <div class="card">
-              <img src="/images/healpi-web.jpg" alt="HEALPI Web Screenshot"/>
-              <h3>HEALPI Web</h3>
-              <p>A healthcare management platform bridging provincial and municipal services.</p>
-            </div>
-            <div class="card">
-              <img src="/images/nethench.jpg" alt="NetHench Screenshot"/>
-              <h3>NetHench</h3>
-              <p>An IoT dashboard for monitoring poultry health and anthelmintic efficacy.</p>
-            </div>
-            <div class="card">
-              <img src="/images/stealthify-web.jpg" alt="Stealthify Web Screenshot"/>
-              <h3>Stealthify Web</h3>
-              <p>A privacy-focused interface for dynamic IP switching and secure browsing.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Certifications -->
-      <section id="certs">
-        <h2>Certifications</h2>
-        <div class="accordion">
-          <button class="accordion-btn">View My Certifications</button>
-          <div class="accordion-content">
-            <div class="card"><img src="/images/cert-cyber.jpg" alt="Cyber Threat Management"/><h3>Cyber Threat Management</h3></div>
-            <div class="card"><img src="/images/cert-sql.jpg" alt="SQL Injection Attacks"/><h3>SQL Injection Attacks</h3></div>
-            <div class="card"><img src="/images/cert-intro.jpg" alt="Introduction to Cybersecurity"/><h3>Introduction to Cybersecurity</h3></div>
-            <div class="card"><h3>Data Privacy Awareness (4-hour Session)</h3></div>
-            <div class="card"><h3>Cyber Tools – ICpEP</h3></div>
-            <div class="card"><h3>Cyber Threat Landscape and Cyber Hygiene</h3></div>
-            <div class="card"><h3>Cyber 101</h3></div>
-            <div class="card">
-              <a href="certificates/Computer Hardware Basics.pdf" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.icons8.com/plasticine/100/000000/pdf.png" alt="Certificate PDF" style="width: 80px;" />
-                <div>View Computer Hardware Basics Certificate (PDF)</div>
-              </a>
-            </div>
-            <div class="card">
-              <a href="certificates/Kian Axl T. Diaz Data Visualization Workshop (Sept 17) - Certificate of Participation.pdf" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.icons8.com/plasticine/100/000000/pdf.png" alt="Data Visualization Workshop Certificate PDF" style="width: 80px;" />
-                <div>Free Coding Bootcamp: Data Visualization Workshop</div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills -->
-      <section id="skills">
-        <h2>Skills</h2>
-        <div class="accordion">
-          <button class="accordion-btn">View My Skills</button>
-          <div class="accordion-content">
-            <div class="skills-list">
-              <div class="card">HTML / CSS</div>
-              <div class="card">JavaScript</div>
-              <div class="card">Flutter</div>
-              <div class="card">SQL</div>
-              <div class="card">Networking</div>
-              <div class="card">Computer Technician</div>
-              <div class="card">Android Repair</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Experience -->
-      <section id="experience">
-        <h2>Work Experience</h2>
-        <div class="accordion">
-          <button class="accordion-btn">View My Experience</button>
-          <div class="accordion-content">
-            <div class="experience">
-              <div class="card"><h3>Coming Soon</h3></div>
-              <div class="card"><h3>Coming Soon</h3></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section class="contact" id="contact">
-        <h2>Contact Me</h2>
-        <p>Let’s connect on the platforms below:</p>
-        <div class="socials">
-          <a href="https://www.facebook.com/surudoi.16" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.linkedin.com/in/kian-axl-diaz-814605365" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/Kasumi12" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://discord.com/" target="_blank"><i class="fab fa-discord"></i></a>
-        </div>
-        <form class="contact-form" id="emailForm" autocomplete="off">
-          <label for="email">Your Email</label>
-          <input type="email" id="email" name="email" placeholder="your@email.com" required />
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" placeholder="Type your message..." required></textarea>
-          <button type="submit">Send</button>
-          <div class="form-success" id="formSuccess" style="display:none;"></div>
-          <div class="form-error" id="formError" style="display:none;"></div>
-        </form>
-      </section>
-    </main>
-
-    <footer>
-      © 2025 Kasumi12
-    </footer>
-  </div>
-  <script src="main.js"></script>
+  <section class="hero">
+    <h1>Hello, I'm <span>Kian Axl</span></h1>
+    <p>A passionate developer creating amazing digital experiences</p>
+    <a href="#projects" class="btn">Explore My Work →</a>
+  </section>
 </body>
 </html>
