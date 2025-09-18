@@ -1,15 +1,7 @@
-html {
-  scroll-padding-top: 90px; /* match your header height */
-}
-
-/* === RESET / GENERAL === */
-body {
-  margin: 0;
-  font-family: 'Inter', Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-  min-height: 100vh;
+/* === GENERAL RESET FIX === */
+body, body * {
+  color: #000;
+  font-weight: bold;
 }
 
 /* === OFFSET FIX FOR HEADER === */
@@ -27,8 +19,8 @@ main {
   box-shadow: var(--shadow);
   padding: 0 1.2rem;
   opacity: 0;
-  transition: max-height 0.5s cubic-bezier(.36,1.4,.63,1),
-              padding 0.3s ease,
+  transition: max-height 0.5s cubic-bezier(.36,1.4,.63,1), 
+              padding 0.3s ease, 
               opacity 0.5s ease;
 }
 .accordion-content.active {
@@ -46,7 +38,7 @@ main {
   text-align: center;
   height: 85vh;
   padding: 2rem;
-  margin: 0; /* override old margin */
+  margin: 0; /* remove earlier margin override */
   background: transparent;
 }
 .hero h1 {
